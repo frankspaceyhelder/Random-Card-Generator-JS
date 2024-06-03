@@ -1,6 +1,6 @@
 window.onload = () => {
   document.querySelector(".card").classList.add(genRandSuit());
-  document.querySelector(".card").innerHTML = genRandNumb();
+  document.querySelector(".cardNumber").innerHTML = genRandNumb();
 };
 
 let genRandNumb = () => {
@@ -28,3 +28,7 @@ let genRandSuit = () => {
   let indexSuit = Math.floor(Math.random() * suit.length);
   return suit[indexSuit];
 };
+
+document
+  .querySelector(".card")
+  .classList.remove("heart", "diamond", "spade", "club");
